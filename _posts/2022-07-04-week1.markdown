@@ -1,0 +1,24 @@
+Hi, all!
+
+It's the first official blog I post there about this summer coding task.
+
+It's hard to believe the gap between our first meeting and today is almost 3 weeks.
+
+What stalled me was building gr-web from the source.
+
+And honestly, it really takes time and consumes patience.
+
+I really appreciate [Marc](https://github.com/marcnewlin/gnuradio-web), He gives me a lot of help without words.
+
+Back to gr-web, What I had done is successfully build the gr-web.
+
+For the next plan(these days):
+
+* Consider completing a naive test flamework for running unit tests for volk python code.
+* Consider a method to porting volk kernel with simd accelerate under wasm.
+
+Currently, the main module is built to the static library and called by python with pybind11. Focus on volk this lib, the CPP code uses the generic functions under many top-level modules, so I will create a simple module called volk_test to run different python codes.
+
+*For the attractive part:*
+
+I wonder if we can directly use NumPy to implement those simd kernels.
