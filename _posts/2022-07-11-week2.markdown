@@ -1,0 +1,22 @@
+Hi all!
+
+## For last week 
+I am finally success building gr-web from source code.
+(yeah, last week there existed a weird issue, currently, I running well on chrome but poorly on firefox), 
+and I will watch it later!
+
+Besides, I am playing a simple flow graph with grc (gnuradio-companion).
+It's cool running cos the noise on the grc, and watching the rise and down.
+
+I have to say I cannot get the point with running python in index.html last week, 
+and luckily Marc helped me figure it out that the py file will call grc function 😊
+
+## For this week
+I will try to measure the performance on `volk` with origin grc script, pure python call lib, and wasm(if successful)
+
+The step I plan to achieve:
+  1. choose the origin grc python script as test case A
+  2. choose the wasm_no_simd volk script as test case B
+  3. (if fortunate) choose the wasm_simd volk script as test case C
+  4. using chrome dev-tools to benchmark
+Thanks for your reading!
