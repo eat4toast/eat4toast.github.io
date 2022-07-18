@@ -1,0 +1,43 @@
+Hey, everyone!  
+
+
+
+The covid19 slows me down, it is a **long long long** story
+**(I believe you will not like this tiring narrative, so I place it in the final)**
+
+
+last week I am doing little things, only exporting the above [blog](https://eat4toast.github.io/2022/07/18/(part1)Running-with-browser-dev-tool-to-detect-hotpath.html).
+  
+  And still stuck to finishing last week's goal:
+Test the different implemented volk kernels.
+
+### understand the blog
+
+The above blog seems not too easy to understand if you are not experienced with profiler 😅 
+
+OK, the dev tools can do such things, and we will use them to clock the `generate` and `execute` time costs.  
+
+And at the moment, it will show which function takes much time  
+(in the flame graph, the deeper and longer takes deeper call chain and takes more time)  
+
+so this way, we will use dev tools to record the whole program execution and specify/ compare the time cost.
+
+### intend todo
+
+Besides, I intend to open a draft pull request in gr-web. 
+(since then everyone can push me to achieve each week's target)  (hahaha) 
+
+Contact with Marc takes time, and everyone(including Marc) can delicately review my code if it needs improvement/ help.
+
+
+
+### Boring and long long long story
+My roommate has dinner in a dining room, but their waiters have a confirmed case, so many things happen like nucleic acid testing at high frequencies, 
+the final thing is that no one got the novel coronavirus(yet, still negative) right now. But my roommate has to be isolated in a hotel.
+> **(I am in China right now, here the policy to covid19 is more strictly)**
+Takes an actual example: you are safe before going the subway, and after the subway, 
+your phone will receive a message to inform you to go to the hospital to queue for a long time to do nucleic acid testing as soon as possible.
+
+Thank you for reading!  
+
+Hope everyone well, and nice day! 
