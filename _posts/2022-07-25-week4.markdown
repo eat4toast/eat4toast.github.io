@@ -1,0 +1,31 @@
+Hi, all!
+
+
+ It's burning outside, scorching last week.
+ The following is what I do in last week.
+
+### commit missing
+Unluckily, I have to build gr-web. 
+But I found `dependency missing` the same things.
+
+
+It turns out the [checkout commits in gnuradio.dockerfile](https://github.com/marcnewlin/gnuradio-web/blob/update-to-current-grc-qt/dockerfiles/gnuradio.dockerfile#L109-L119) are currently missing([here](https://github.com/gnuradio/gnuradio/commit/739103692cfdc4dbd74c304a0443a0e896b1112d))([here](https://github.com/gnuradio/gnuradio/commit/bb2f782e755fd08d03316a4cf43094c10ed7eb23)), 
+
+Okay, build success, but running failed with the following issue.
+
+
+PS: I even try running with wasm runtime like wasmtime, wasmedge (but they are not fully supported, I mean it will show weird error)
+### issue replay
+
+Fortunately, I find a [tweet](https://twitter.com/ChristianHeimes/status/1464310303966085125?s=20&t=TWdzwv-_CnPfIZRDW0ee_w) that shows an issue same as my current problem.
+
+And I found the solution [commit](https://github.com/ethanhs/python-wasm/commit/b184f108120fb07de3aed4981e47098388163187#diff-379120a2aed78589d07e925298ea4da3bb1ba77a0337015754f723305876178f) in the origin repo.
+
+I strongly recommend you to play this [repo](https://github.com/ethanhs/python-wasm) if you have an interest in how to run python in your pure browser.
+### intend todo
+And I intend to follow the [commit](https://github.com/ethanhs/python-wasm/commit/2688a17bbe9d33a1b63dcf98f29ad91a98e6e593) in the above repo to modify the gnuradio.dockerfiles.
+
+
+### small thought
+In the prior, I even consider withdrawing from this GSoC due to endless build gr-web fail, but after watching this [youtube video(the CPython core dev display the future in wasm)](https://youtu.be/oa2LllRZUlU),
+I feel it is valuable and funny to do these things.
