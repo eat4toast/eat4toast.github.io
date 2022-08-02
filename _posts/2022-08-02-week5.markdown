@@ -1,0 +1,40 @@
+Hi, everyone!
+
+Yeah, I know this post is delayed one day(expected yesterday), since yesterday with [@haakov](https://github.com/haakov)'s help, I get more progress.
+
+## progress
+it maybe sounds amusing, but I finally successfully run the flow graph again. posted image: ![here](https://s1.328888.xyz/2022/08/02/FdOF5.jpg)
+
+(seems related to the commit lost in rebasing, **I do not know why, but it works haha**).
+
+And luckily, I found out in nearly 3 weeks ago why my chrome can run flow-graph but firefox fails running the same server.py.
+
+It causes by cookies, after cleaning all loaded cookies and data, it plays normally.
+
+## todo
+well, it's time to hurry up.
+I intend to do 2 things in parallel:
+
+1. building volk through wasm-simd
+2. enable edit the module in flow graph on gr-web
+
+
+The first thing is already delayed many weeks. I plan to modify the emscripten compile option and try transplanting the simd.
+
+
+The second thing that is really important not only does current the gr-web not support the edition module ability but it will enable more extensible.
+
+
+It's a bit fuzzy:
+find the accurate code, build to a static library, and call by python through pybind.
+
+
+
+### That's all.
+By the way, If you want to build gr-web locally, recommend to using this branch:
+https://github.com/haakov/gnuradio-web/tree/patch-2
+
+
+Thank you for reading this full blog. 
+
+\#world peace
