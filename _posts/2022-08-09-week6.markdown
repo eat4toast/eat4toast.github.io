@@ -36,13 +36,16 @@ Following are 3 things I am going _todo_:
 * building with debug mode `CPython`, it will display the more useful message
 * try deep into *webapp/* directory, directly compare with `python.js` and other files with different CPython building.
 * for test volk: with `wasm2wat` to check the volk code is really building to SIMD(indeed, the support for SIMD is really limited)
+
+
 ## for second things(enable modify module)
+
 Since my code will directly modify the python code in grc, it's vital to together with the community.
 I am studying the [wiki.gnuradio.org](wiki.gnuradio.org). For example user manual, contribution guide
 
 I will start by enabling save/open file in the user-selected path.
-
-https://github.com/marcnewlin/gnuradio-web/blob/acdf1dbb5795ea6f849e251ff596a82b83856d4e/grc-dev/gnuradio/grc/gui_qt/components/window.py#L486-L501
+[grc/gui_qt/components/windows.py](https://github.com/marcnewlin/gnuradio-web/blob/acdf1dbb5795ea6f849e251ff596a82b83856d4e/grc-dev/gnuradio/grc/gui_qt/components/window.py#L486-L501
+)
 
 ---
 Thanks for your watching.
