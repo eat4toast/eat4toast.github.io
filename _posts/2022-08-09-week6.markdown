@@ -1,0 +1,48 @@
+Hi, all! 
+I am sorry for the blog delay one day since I have eaten bad food at my dinner the day before yesterday.
+
+Well, what I am going to do is 2 things:
+1. building wasm-simd volk
+2. enabling modify flow graph modules in gr-web
+
+
+## for first things(wasm SIMD version volk)
+Emscripten toolchain implements a layer for porting simd. (it supports both **auto translate limited intrinsic to simd** and manually write wasm-simd)
+
+If you still have an interest or you may want to dive into the standard doc/wiki:
+
+[https://emscripten.org/docs/porting/simd.html](https://emscripten.org/docs/porting/simd.html)
+
+[https://v8.dev/features/simd](https://v8.dev/features/simd)
+
+---
+
+Last week, I tried building with the emscripten compile option(adding -msimd128 in `make volk`), and building success failed.
+
+since the output log is not really clear, I doubt may be due to the `emscripten` version being too old.
+
+But with the latest version, the origin building failed with building `boost`, so I think there might be another weird issue.
+
+Another important thing is ensuring if the `volk` is really using the building with `wasm-simd`.
+
+My naive thought: do disassembler with the volk static library(maybe under `objdump`).
+Also, there have [wasm2wat](https://webassembly.github.io/wabt/doc/wasm2wat.1.html) tools to help read the wasm.
+
+I forget to introduce the wasm and wat, let's simple way: the wasm is an intrinsic format, and wat is a human-readable format.
+
+---
+
+Following are 3 things I am going _todo_:
+* building with debug mode `CPython`, it will display the more useful message
+* try deep into *webapp/* directory, directly compare with `python.js` and other files with different CPython building.
+* for test volk: with `wasm2wat` to check the volk code is really building to SIMD(indeed, the support for SIMD is really limited)
+## for second things(enable modify module)
+Since my code will directly modify the python code in grc, it's vital to together with the community.
+I am studying the [wiki.gnuradio.org](wiki.gnuradio.org). For example user manual, contribution guide
+
+I will start by enabling save/open file in the user-selected path.
+
+https://github.com/marcnewlin/gnuradio-web/blob/acdf1dbb5795ea6f849e251ff596a82b83856d4e/grc-dev/gnuradio/grc/gui_qt/components/window.py#L486-L501
+
+---
+Thanks for your watching.
