@@ -5,7 +5,7 @@ Because I'm currently taking the opening exam(actually the final exams that were
 ### Building debug mode Cpython
 
 Building the debug mode Cpython is easy if you take the right step:
-the cpython.dockerfile I modified has shared in this [here](https://github.com/eat4toast/gr-web-simd-wasm/blob/main/cpython.dockerfile),also diffchecker in  https://www.diffchecker.com/1eewSZyD.
+the cpython.dockerfile I modified has shared in this [here](https://github.com/eat4toast/gr-web-simd-wasm/blob/main/cpython.dockerfile),also diffchecker in  [here](https://www.diffchecker.com/1eewSZyD).
 
 To summary:
 1. add `with-pydebug` option
