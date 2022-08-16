@@ -1,0 +1,37 @@
+Hi, folks!
+
+Because I'm currently taking the opening exam(actually the final exams that were missed from the early holiday of last semester), the progress last week was relatively small.
+
+---
+
+As in the previous blog, there is a way to detect whether we succeed in building the wasm-SIMD version volk is dive into the output wasm file 
+(With [wasm2wat](https://webassembly.github.io/wabt/doc/wasm2wat.1.html) or [wasm-objdump](https://webassembly.github.io/wabt/doc/wasm-objdump.1.html), we can have a look in deep).  _Here, the wasm2wat means translating to the human-readable format(wat)._
+
+Here is the step how I reproduce:
+* Run the docker image [CPython:dev](https://github.com/marcnewlin/gnuradio-web/blob/update-to-current-grc-qt/dockerfiles/volk.dockerfile#L1) and execute as the [volk.dockerfile](https://github.com/marcnewlin/gnuradio-web/blob/update-to-current-grc-qt/dockerfiles/volk.dockerfile).
+* With [wasm2wat](https://webassembly.github.io/wabt/doc/wasm2wat.1.html) / [wasm-objdump](https://webassembly.github.io/wabt/doc/wasm-objdump.1.html) to disassembly the volk output library
+
+
+**(You might need to clone [wabt repo](https://github.com/WebAssembly/wabt) to build above 2 tools first)**
+ 
+ Also, I recommend building another (pure and origin, you know, just cmake and make without other complex argument) volk library and do objdump to disassembly. Why? Compare the output.
+ 
+I take a snippet below:(the first look same as neon intrinsic in my view)
+```
+          if  ;; label = @4
+            local.get 12
+            f32x4.extract_lane 1
+            local.set 4
+            local.get 12
+            f32x4.extract_lane 0
+            local.set 5
+            v128.const i32x4 0x00000000 0x00000000 0x00000000 0x00000000
+            br 1 (;@3;)
+          end
+```
+
+---
+
+Alright, and I am starting analysis the python.js and index.HTML, etc.. file (Here make an isolated file system, code line here).
+ 
+Finally, I guess it maybe will be extended one month to achieve the expected result. Well, It's my last year at my university, and I only have fewer classes. I believe I have enough time to go on if world peace(hahaha).
