@@ -1,0 +1,13 @@
+Hi, all!
+
+Last week I am busy reviewing my school exam things, doing few things on gr-web.
+
+And the GSoC project is going to end (on September 12).
+I believe I need more time to finish it due to the time cost of prev building.
+
+Thanks to Marc, We talking about the *CPython officially support building wasm version in later month*.
+Well, I have more time in the later month since my institute focuses on credits and I have got enough this, so I even have no other class.
+
+So the plan for me is going to work on some missing component/function development in gr-web for the next 2 months.
+For the wasm-SIMD gr-web, I will **keep on until a long time**
+(Truly, I am bullish on CPython, and I think it needs some time to get involved).
