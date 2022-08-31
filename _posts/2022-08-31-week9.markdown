@@ -1,0 +1,20 @@
+It's rainy outside, and I have nothing to report for last week what I have done.
+
+
+I am sorry for the zero output during this project, I think there must be some arrangement mess by me.
+
+
+I have to admit I am not passionate as before.
+
+
+The first thing which holds me up is that Marcus wants to make the gr-web more extensible in educating, 
+but I think the user_experience is a multi-dimensional thing. 
+
+After futile effort in the wasm-simd, I turn to gr-web, but the qt5-python is unfamiliar to me.
+I do not want to express how hard such things, it's just needs a timeline and buffer to run strictly.
+
+A lesson that I learned is to make a full PLAN B. For me, I am encountering endless nucleic acid COVID-19 and school exams. also the most important is my project timeline not really valid. Refer to PLAN B, which means that I have a second way to go.  
+
+Maybe you could with this as a warning to do full risk mitigation management during software development.
+
+Thank you for reading.
