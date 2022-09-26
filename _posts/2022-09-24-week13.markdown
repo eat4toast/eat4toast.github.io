@@ -1,1 +1,52 @@
-test file
+Hi, all!
+It’s gnuradio-conference celebrity, right? Hope you could get what you want from this gr-con.
+
+This is the official final week. As previously mentioned, I still want to keep on until the CPython official support builds wasm version. In this blog, I plan to illustrate the basic code structure in gr-web. 
+
+Those are based on my thought. The code commit version: gnuradio/grc/gui_qt/components at feature-grc-qt-rebased · haakov/gnuradio (github.com) (Much thanks to haakov, he give me much help)
+
+---
+
+Okay, the important thing is there are different layouts, I will start with `delete module from flow graph`. Here we call the ```func delete_triggered(self) in grc/gui_qt/components/windows.py```
+And then we jump to grc/gui_qt/flowgraph.py to call func `delete_selected` which will finally call 
+grc/core/FlowGraph.py func `remove_element`.
+
+
+So, we stand in the windows.py, here set the event to specific triggered function, like `move` `rotate`, and then it will call a super class method or update the whole graph.
+
+---
+
+Back to the filesystem support, here the emscripten implements a virtual filesystem above the browser to achieve safety  I guess. And In 3.8 later version for gnuradio, support YAML first on the file input or output.  What we want to do is simple: open and save, copy and paste.
+
+For open:
+Parse flowgraph from the input or hard-coded file path 
+Import data from the path 
+Update flow_graph and display.
+For save:
+Export data from flow_graph
+Output data to YAML type file
+Save the YAML type file
+For copy:
+Iterate the blocks list to find the selected block position
+Return a tuple containing the property of the selected block
+For paste:
+Check the clipboard have content
+Copy the content and generate a new block
+Update flow graph
+
+But in actual development, I faced many weird issues, like after selecting the file path, but cannot return the file path if I intend to open a file.
+
+For the deliverable, I know there exists a huge gap between mines and the target. To be honest, I have learned a lot from this activity. The impressive thing is risk management (hahaha), I should be more controllable to my schedule but ignored by various things. I am SORRY!
+
+---
+
+
+acknowledgments
+
+[@Marc](https://github.com/marcnewlin/), The daily week with Marc is my pleasant day since we can talk about the schedule and plan. Even though there 
+
+[@Haakov](https://github.com/haakov/) He is a nice man, He helps me solve many vital problems(hahaha, in the beginning, my email is set as spam, but Haakov helps me to together with all).
+
+[@Marcus](https://github.com/marcusmueller) Even though he did not appear many times, he always encourage me to insist on cool things.
+
+[@Community EveryOne](https://github.com/gnuradio/gnuradio) give me help and comment and advice, those are all the best reply!
